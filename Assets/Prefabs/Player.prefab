@@ -42,6 +42,7 @@ GameObject:
   - 114: {fileID: 114000013379974556}
   - 114: {fileID: 114000011185006866}
   - 114: {fileID: 114000012512792946}
+  - 135: {fileID: 135000010714159886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -56,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013926322516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62, y: -32.4, z: -520}
+  m_LocalPosition: {x: 0, y: 1.33, z: -2.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -148,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
+  isInspecting: 
   headbob: 1
   bobSpeed: 4.8
   bobAmount: 0.2
@@ -166,6 +168,9 @@ MonoBehaviour:
   pickupDist: 1.5
   objectPos: 0.8
   rotationSpeed: 5
+  reticle: {fileID: 0}
+  reticleSprites: []
+  inventory: {fileID: 114000011185006866}
 --- !u!124 &124000012664231980
 Behaviour:
   m_ObjectHideFlags: 1
@@ -173,6 +178,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011413162316}
   m_Enabled: 1
+--- !u!135 &135000010714159886
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013926322516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143000012740046690
 CharacterController:
   m_ObjectHideFlags: 1
