@@ -27,10 +27,22 @@ public class GateScript : MonoBehaviour {
 
         if (isGrabbed)
         {
+
+            float angle = transform.localEulerAngles.y + Input.GetAxisRaw("Mouse X");
+            angle = (angle > 180) ? angle - 360 : angle;
+            print(angle);
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + Input.GetAxisRaw("Mouse X"), transform.eulerAngles.z);
-            if (transform.eulerAngles.y - 180 + Input.GetAxisRaw("Mouse X") > angleRange.x && transform.eulerAngles.y - 180 + Input.GetAxisRaw("Mouse X") < angleRange.y)
+            if (angle> angleRange.x && angle < angleRange.y)
                 transform.rotation = newRot;
         }
+
+        if(transform.localEulerAngles.y < angleRange.x)
+        {
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, angleRange.x, transform.localEulerAngles.z);
+        }
+
+
+
 	}
 
 
