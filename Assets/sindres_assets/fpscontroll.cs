@@ -156,12 +156,12 @@ public class fpscontroll : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag ("Pick Ups")) 
-		{
-			other.gameObject.SetActive (false);
-			jumpPowerGems ++;
-
-
-		}
+//		if (other.gameObject.CompareTag ("Pick Ups")) 
+//		{
+//			other.gameObject.SetActive (false);
+//			jumpPowerGems ++;
+//
+//
+//		}
 	}
 }
